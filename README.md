@@ -32,12 +32,16 @@ pip install -r requirements.txt
 
 cd src/infra/
 
+cd ..
+cd ..
+
 # start your mysql server before run this command
 alembic upgrade heads
 
 export FLASP_APP=main.py
 python3 -m flask run --host=127.0.0.1 --port=3333
 ```
+
 Go to the folder infra and in the alembic.ini file change the variable `sqlalchemy.url` with your server data, and the same thing in the `.env` file to run locally without docker
 
 	Ex:
