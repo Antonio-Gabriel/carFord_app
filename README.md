@@ -22,6 +22,23 @@ docker-compose up -d
 sudo docker-compose --verbose build --no-cache
 sudo docker-compose up -d
 ```
+For run local, run the commands bellow:
+
+```bash
+python3 -m venv venv
+. venv/bin/activate
+
+pip install -r requirements.txt
+
+cd src/infra/
+
+# start your mysql server before run this command
+alembic upgrade heads
+
+export FLASP_APP=main.py
+python3 -m flask run --host=127.0.0.1 --port=3333
+```
+
 Rename `.env.example` to `.env` to get the global variables.
 
 The docker will create the container of application and the database automatically, and create a `seed` with some admin that will register or join persons to a car in the platform but it's need of authentication to work.

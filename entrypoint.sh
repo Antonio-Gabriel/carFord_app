@@ -1,2 +1,2 @@
-cd src/infra;
+cd src/infra/;
 alembic upgrade heads;

@@ -31,5 +31,3 @@ class CreatePersonsController:
                 400,
             )
 
-
-# karolina.cardoso@advicehealth.com.br (enviar o github)
