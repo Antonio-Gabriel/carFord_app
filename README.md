@@ -15,10 +15,11 @@ Database of system:
 To start the app first you need to install docker in your machine if don't have and after, run the command bellow:
 
 ```bash
+docker-compose --verbose build --no-cache
 docker-compose up -d
 
 # ubuntu
-
+sudo docker-compose --verbose build --no-cache
 sudo docker-compose up -d
 ```
 Rename `.env.example` to `.env` to get the global variables.
