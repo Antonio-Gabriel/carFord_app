@@ -18,7 +18,7 @@ class PersonProps:
 class Person:
     """person entity"""
 
-    def __init__(self, person_props: Type[PersonProps], _id: str | None = None) -> None:
+    def __init__(self, person_props: Type[PersonProps], _id: str = None) -> None:
         self.person_props = person_props
         self.__id = _id if _id is not None else str(uuid4())
 

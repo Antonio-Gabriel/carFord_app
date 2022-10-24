@@ -9,7 +9,7 @@ class CreatePersonUsecase:
     def __init__(self, persons_repository: Type[IPersonsRepository]) -> None:
         self.__persons_repository = persons_repository
 
-    async def execute(self, name: str, email: str, is_admin: bool = False) -> Person | dict:
+    async def execute(self, name: str, email: str, is_admin: bool = False):
         """execute usecase"""
 
         person = PersonAdapter.create(name, email, is_admin)

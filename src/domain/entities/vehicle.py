@@ -24,7 +24,7 @@ class VehicleProps:
 class Vehicle:
     """vehicle entity"""
 
-    def __init__(self, vehicle_props: Type[VehicleProps], _id: str | None = None) -> None:
+    def __init__(self, vehicle_props: Type[VehicleProps], _id: str = None) -> None:
         self.vehicle_props = vehicle_props
         self.__id = _id if _id is not None else str(uuid4())
 

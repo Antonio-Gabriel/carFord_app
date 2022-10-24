@@ -19,9 +19,8 @@ RUN pip --no-cache-dir install -r requirements.txt
 COPY . .
 
 COPY entrypoint.sh /entrypoint.sh
-
 RUN chmod +x /entrypoint.sh
 
 entrypoint "/entrypoint.sh"
 
-CMD ["python3", "-m", "flask", "run", "--host=127.0.0.1"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0","--port=3333"]
