@@ -38,7 +38,12 @@ alembic upgrade heads
 export FLASP_APP=main.py
 python3 -m flask run --host=127.0.0.1 --port=3333
 ```
+Go to the folder infra and in the alembic.ini file change the variable `sqlalchemy.url` with your server data, and the same thing in the `.env` file to run locally without docker
 
+	Ex:
+		sqlalchemy.url = mysql+pymysql://root:12345@db/carFord
+		DB_URL="mysql+asyncmy://root:12345@db/carFord"
+		
 Rename `.env.example` to `.env` to get the global variables.
 
 The docker will create the container of application and the database automatically, and create a `seed` with some admin that will register or join persons to a car in the platform but it's need of authentication to work.
