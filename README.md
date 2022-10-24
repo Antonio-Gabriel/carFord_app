@@ -203,7 +203,7 @@ features that already builded are:
 - [x] Authentication and route security
 - [x] Create a vehicle attached to a person
 - [x] Limited the number of vehicles per person (maximum 3)
-- [] Swagger documentation
+- [ ] Swagger documentation
 
 # Credits
 
