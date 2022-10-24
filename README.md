@@ -41,8 +41,8 @@ python3 -m flask run --host=127.0.0.1 --port=3333
 Go to the folder infra and in the alembic.ini file change the variable `sqlalchemy.url` with your server data, and the same thing in the `.env` file to run locally without docker
 
 	Ex:
-		sqlalchemy.url = mysql+pymysql://root:12345@db/carFord
-		DB_URL="mysql+asyncmy://root:12345@db/carFord"
+		sqlalchemy.url = mysql+pymysql://root:12345@localhost/carFord
+		DB_URL="mysql+asyncmy://root:12345@localhost/carFord"
 		
 Rename `.env.example` to `.env` to get the global variables.
 
