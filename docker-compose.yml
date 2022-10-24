@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: carford_database
+    restart: always
+    environment:            
+      - MYSQL_DATABASE=carFord
+      - MYSQL_PASSWORD=12345
+      - MYSQL_ROOT_PASSWORD=12345
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql      
+
+  web:
+    build:
+      context: .
+    restart: on-failure    
+    container_name: carFord_app
+    command: /bin/sh -c "entrypoint.sh"
+    ports:
+      - '3333:3333'
+    depends_on:
+      - db
+
+volumes:
+  db:
+   driver: local
