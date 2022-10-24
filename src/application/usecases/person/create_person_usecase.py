@@ -1,6 +1,6 @@
 from typing import Type
 from ...repositories.persons_repository import IPersonsRepository
-from ...adapter.person_adapter import PersonAdapter, Person
+from ...adapter.person_adapter import PersonAdapter
 
 
 class CreatePersonUsecase:
