@@ -38,7 +38,7 @@ cd ..
 # start your mysql server before run this command
 alembic upgrade heads
 
-export FLASP_APP=main.py
+export FLASK_APP=main.py
 python3 -m flask run --host=127.0.0.1 --port=3333
 ```
 
